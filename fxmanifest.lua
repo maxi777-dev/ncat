@@ -1,7 +1,7 @@
 fx_version 'cerulean'
 game 'gta5'
 
-author 'Tu Nombre'
+author 'Tu nombre'
 description 'Recurso FiveM'
 version '1.0.0'
 
